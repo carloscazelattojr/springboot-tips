@@ -1,6 +1,22 @@
 # springboot-tips
 Tips for using with Spring Boot
 
+## Application.Properties and DB Config.
+- [application.properties for Spring-Boot: DB config](https://github.com/carlosjunior1983/application.properties)
+
+
+## Pagination
+
+Parâmetros de paginação
+```
+@RequestParam(value = "page", defaultValue = "0") Integer page,
+@RequestParam(value = "linesPerPage", defaultValue = "12") Integer linesPerPage,
+@RequestParam(value = "orderBy", defaultValue = "moment") String orderBy,
+@RequestParam(value = "direction", defaultValue = "DESC") String direction)
+
+```
+
+
 ## Tests 
 
 <strong>@SpringBootTest</strong><br>
