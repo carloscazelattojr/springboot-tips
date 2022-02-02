@@ -98,6 +98,26 @@ Carrega somente os componentes relacionados ao Spring Data JPA. Cada teste é tr
 </tbody>
 </table>
 
+<br>
+<hr>
+<br>
+# POSTMAN 
+#### Configurar variavel de Environment {{token}}
+
+Crie um environment.
+crie uma variável token.
+Na sua requisição de login /oauth/, na aba tests coloque o script abaixo.
+
+```
+if (responseCode.code >= 200 && responseCode.code < 300) {
+    var json = JSON.parse(responseBody);
+    postman.setEnvironmentVariable('token', json.access_token);
+}
+```
+![Image](https://github.com/carlosjunior1983/springboot-tips/blob/main/postman1.JPG "Environment")
+
+![Image](https://github.com/carlosjunior1983/springboot-tips/blob/main/postman2.JPG "Environment")
+
 
 
 
